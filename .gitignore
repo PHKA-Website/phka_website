@@ -1,0 +1,12 @@
+.DS_Store
+.idea
+.env
+/public/fileadmin
+/public/index.php
+/public/_assets
+/public/typo3
+/public/typo3conf/ext
+/public/typo3temp
+/var
+/vendor
+!.gitkeep

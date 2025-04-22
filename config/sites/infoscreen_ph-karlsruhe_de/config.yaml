@@ -1,0 +1,3 @@
+imports:
+  - { resource: "EXT:phka_sitepackage/Configuration/Sites/infoscreen_ph-karlsruhe_de/config.yaml" }
+rootPageId: 195

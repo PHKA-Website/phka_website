@@ -1,0 +1,85 @@
+{
+	"name": "phka/website",
+	"description" : "TYPO3 installation including site package of the University of Education Karlsruhe",
+	"authors": [
+		{
+			"name": "Oliver Schmidt",
+			"email": "webdev@ph-karlsruhe.de",
+			"role": "Developer",
+			"homepage": "https://ph-karlsruhe.de"
+		}
+	],
+	"repositories": [
+		{
+			"name": "phka/sitepackage",
+			"type": "vcs",
+			"url":  "git@github.com-phka_sitepackage:PHKA-Website/phka_sitepackage.git"
+		},
+		{
+			"name": "phka/frontend",
+			"type": "vcs",
+			"url":  "git@github.com-phka_frontend:PHKA-Website/phka_frontend.git"
+		}
+	],
+	"license": "proprietary",
+	"config": {
+		"allow-plugins": {
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true,
+			"helhum/dotenv-connector": true,
+			"php-http/discovery": true
+		},
+		"platform": {
+			"php": "8.2.11"
+		},
+		"sort-packages": true
+	},
+	"require": {
+		"b13/masi": "^3.0.0",
+		"dmitryd/dd-deepl": "^13.0.2",
+		"helhum/dotenv-connector": "^3.1.2",
+		"helhum/typo3-console": "^8.2.2",
+		"ichhabrecht/content-defender": "^3.5.3",
+		"phka/sitepackage": "dev-main",
+		"phka/frontend": "dev-main",
+		"typo3/cms-adminpanel": "^13.4",
+		"typo3/cms-backend": "^13.4",
+		"typo3/cms-belog": "^13.4",
+		"typo3/cms-beuser": "^13.4",
+		"typo3/cms-core": "^13.4",
+		"typo3/cms-dashboard": "^13.4",
+		"typo3/cms-extbase": "^13.4",
+		"typo3/cms-extensionmanager": "^13.4",
+		"typo3/cms-felogin": "^13.4",
+		"typo3/cms-filelist": "^13.4",
+		"typo3/cms-filemetadata": "^13.4",
+		"typo3/cms-fluid": "^13.4",
+		"typo3/cms-fluid-styled-content": "^13.4",
+		"typo3/cms-frontend": "^13.4",
+		"typo3/cms-info": "^13.4",
+		"typo3/cms-install": "^13.4",
+		"typo3/cms-linkvalidator": "^13.4",
+		"typo3/cms-lowlevel": "^13.4",
+		"typo3/cms-opendocs": "^13.4",
+		"typo3/cms-recordlist": "^13.4",
+		"typo3/cms-recycler": "^13.4",
+		"typo3/cms-redirects": "^13.4",
+		"typo3/cms-reports": "^13.4",
+		"typo3/cms-rte-ckeditor": "^13.4",
+		"typo3/cms-scheduler": "^13.4",
+		"typo3/cms-seo": "^13.4",
+		"typo3/cms-setup": "^13.4",
+		"typo3/cms-sys-note": "^13.4",
+		"typo3/cms-t3editor": "^13.4",
+		"typo3/cms-tstemplate": "^13.4",
+		"typo3/minimal": "^13"
+	},
+	"scripts":{
+		"typo3-cms-scripts": [
+			"typo3 install:fixfolderstructure"
+		],
+		"post-autoload-dump": [
+			"@typo3-cms-scripts"
+		]
+	}
+}

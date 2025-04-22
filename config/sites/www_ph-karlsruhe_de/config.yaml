@@ -1,0 +1,3 @@
+imports:
+  - { resource: "EXT:phka_sitepackage/Configuration/Sites/www_ph-karlsruhe_de/config.yaml" }
+rootPageId: 1
